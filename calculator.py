@@ -16,14 +16,10 @@ from arithmetic import *
 #         quit
 #     else:
 #         decide which math function to call based on first token
-while True:
 
-    user_input = input()
 
-    tolkens = user_input.split(" ")
-
-    if tolkens[0] == "q":
-        break
+def identify_prefix(tolkens):
+    """ Calls correct function based on user input """
 
     num1 = int(tolkens[1])
     
@@ -54,8 +50,23 @@ while True:
     elif tolkens[0] == "mod":
         output = mod(num1, num2)
 
-    print(output)
+    else:
+        print("PUT IN A VALID COMMAND!")
+        output = None
+
+    return output
 
 
+while True:
+
+    user_input = input()
+
+    tolkens = user_input.split(" ")
+
+    if tolkens[0] == "q":
+        break
+
+    answer = identify_prefix(tolkens)
+    print(answer)
 
   
