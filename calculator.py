@@ -23,7 +23,7 @@ while True:
     tolkens = user_input.split(" ")
 
     if tolkens[0] == "q":
-        exit()
+        break
 
     num1 = int(tolkens[1])
     
@@ -33,25 +33,25 @@ while True:
     if tolkens[0] == "+":
         output = add(num1, num2)
 
-    if tolkens[0] == "-":
+    elif tolkens[0] == "-":
         output = subtract(num1, num2)
 
-    if tolkens[0] == "*":
+    elif tolkens[0] == "*":
         output = multiply(num1, num2)
 
-    if tolkens[0] == "/":
+    elif tolkens[0] == "/":
         output = divide(num1, num2)
 
-    if tolkens[0] == "square":
+    elif tolkens[0] == "square":
         output = square(num1)
 
-    if tolkens[0] == "cube":
+    elif tolkens[0] == "cube":
         output = cube(num1)
 
-    if tolkens[0] == "power":
+    elif tolkens[0] == "power":
         output = power(num1, num2)
 
-    if tolkens[0] == "mod":
+    elif tolkens[0] == "mod":
         output = mod(num1, num2)
 
     print(output)
